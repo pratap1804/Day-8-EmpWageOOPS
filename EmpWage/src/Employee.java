@@ -10,17 +10,27 @@ public class Employee {
 	
 	int attendance =(int)Math.floor((Math.random()*10)%3);
 	
-	if(attendance == 0) {
-		System.out.println("Employee is absent");
-	} else if(attendance ==1) {
+	
+	switch (attendance) {
+	
+	case 0:
+	System.out.println("Employee is absent");
+	break;
+	
+	case 1:
 		System.out.println("Employee is present");
 		int Total_Wage = Wage_Per_Hour*Full_Day_Hour;
 		System.out.println("Daily Full Day Wage is: "+Total_Wage);
-		} else {
-			System.out.println("Employee is part-time present");
-			int Total_Wage = Wage_Per_Hour*PartTime_Day_Hour;
-			System.out.println("Daily PartTime Wage is: "+Total_Wage);
-		}
-	}
+		break;
+		
+	case 2:
+		System.out.println("Employee is part-time present");
+		int Total_Wage1 = Wage_Per_Hour*PartTime_Day_Hour;
+		System.out.println("Daily PartTime Wage is: "+Total_Wage1);
+		break;
+			}
 	
+			
+	}
 }
+	
